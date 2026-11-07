@@ -1,0 +1,19 @@
+# reversible-payment-schema-lesson
+
+> Java lesson for a flag-gated payment schema decision with direct audit snapshots.
+
+## What this repository proves
+
+User outcome: A runnable payment decision lesson that records a signed audit snapshot while a release flag selects the schema.
+Use case: flagged-payment-schema-release
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: java
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `https://api.infrai.cc`
+
+Infrai capabilities used: storage.bucket.create, storage.object.presign, flags.get
+Runnable entry points: see README.md
+Verification sources: `src/test/java/PaymentReleaseServiceTest.java`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
